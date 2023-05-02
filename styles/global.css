@@ -37,6 +37,12 @@ button {
   box-shadow: none;
 }
 
+input{
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 /* Navbar */
 .nav-container {
   display: flex;
@@ -404,6 +410,8 @@ hr {
   text-align: center;
 }
 
+
+
 .open-button{
   background-color: green;
   color: #1D1E20;
@@ -481,4 +489,59 @@ th {
 
 tr:hover {
   background-color: grey;
+}
+
+
+/* shorty url css below */
+
+.input-url {
+  background-color: white;
+  color: #1D1E20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  width: 400px;
+  margin-top: 5px;
+}
+
+.input-url:hover {
+  transform: scale(1.05);
+}
+
+.input-url-submit {
+  background: linear-gradient(to right, #ff7f50, #ff4e00);
+  color: #1D1E20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  margin-top: 8px;
+}
+
+.input-url-submit:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff4e00, #ff7f50);
+}
+
+.short-url {
+  background: linear-gradient(to right, lightblue, blue);
+  color: #1D1E20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+  padding: 1rem;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  margin-top: 8px;
 }
