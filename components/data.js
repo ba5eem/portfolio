@@ -13,6 +13,23 @@ export const projectData = [
     description:
       'TBD',
     gitHubLink: 'https://github.com/ba5eem',
+    projectLink: ''
+  },
+  {
+    id: 3,
+    title: 'Forecast Covid-19',
+    description:
+      'A COVID-19 forecasting tool for Hawaiʻi. It provides a 2-week forecast and examines scenarios for cases, hospitalizations & fatalities. The tool aims to assist experts and inform policy decisions on quarantine orders and travel restrictions.',
+    gitHubLink: 'https://www.hawaii.edu/news/2020/07/16/tool-helps-forecast-covid19/',
+    projectLink: 'https://www.hawaii.edu/news/2020/07/16/tool-helps-forecast-covid19/'
+  },
+  {
+    id: 4,
+    title: 'Sensor Prototyping',
+    description:
+      '(IEEE) Sensor packages are presented for prototyping networks to support disaster relief. Results show 15 sensor nodes collecting data with personnel tracking capabilities over a Long Range data link.',
+    gitHubLink: 'https://ieeexplore.ieee.org/document/9268283',
+    projectLink: 'https://ieeexplore.ieee.org/document/9268283'
   },
 
 ];

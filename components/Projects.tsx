@@ -13,7 +13,7 @@ const Projects = () => {
 
       <div className="projects-grid">
         {projectData && projectData.map((project) => (
-          <Link className={router.pathname == "/docker" ? "active" : ""} href="/docker">
+          <Link href={project.projectLink}>
           <div className="project-card" key={project.id}>
             <div className="project-header">
               <i className="fa-regular fa-folder-open folder-icon"></i>

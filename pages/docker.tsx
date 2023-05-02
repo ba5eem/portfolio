@@ -147,7 +147,7 @@ export default function Home(props) {
 }
 
 
-const LoaderDiv = (props) => <div> <p>Loading {props.app}</p> <div className="loader"></div></div>;
+
 
 
 export async function getServerSideProps() {

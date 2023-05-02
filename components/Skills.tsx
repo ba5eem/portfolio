@@ -40,4 +40,61 @@ const Skills = () => {
   )
 }
 
+
+
+// with react individual import
+
+
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faNode,faDocker,faJs,faReact,faLinux, faMicrosoft, faAws } from '@fortawesome/free-brands-svg-icons'
+// import { faDatabase } from "@fortawesome/free-solid-svg-icons"
+
+
+
+
+
+// const Skills = () => {
+//   return (
+//     <div className="skills-container">
+//       <h2>Skills</h2>
+//       <div className="grid-skills">
+//         <div className="skill-card node">
+//           <FontAwesomeIcon icon={faNode} />
+//           <p>Node</p>
+//         </div>
+//         <div className="skill-card docker">
+//           <FontAwesomeIcon icon={faDocker} />
+//           <p>Docker</p>
+//         </div>
+//         <div className="skill-card js">
+//           <FontAwesomeIcon icon={faJs} />
+//           <p>JavaScript</p>
+//         </div>
+//         <div className="skill-card react">
+//           <FontAwesomeIcon icon={faReact} />
+//           <p>React</p>
+//         </div>
+//         <div className="skill-card linux">
+//           <FontAwesomeIcon icon={faLinux} />
+//           <p>Linux</p>
+//         </div>
+//         <div className="skill-card database">
+//           <FontAwesomeIcon icon={faDatabase} />
+//           <p>SQL</p>
+//         </div>
+//         <div className="skill-card aws">
+//           <FontAwesomeIcon icon={faAws} />
+//           <p>AWS</p>
+//         </div>
+//         <div className="skill-card azure">
+//           <FontAwesomeIcon icon={faMicrosoft} />
+//           <p>azure</p>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Skills;
+
 export default Skills;

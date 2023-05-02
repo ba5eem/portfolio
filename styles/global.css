@@ -275,12 +275,16 @@ hr {
   font-size: 1.5rem;
 }
 
-.skills-container .grid-skills .html:hover {
-  background-color: #E34F26;
+.skills-container .grid-skills .docker:hover {
+  background-color: salmon;
 }
 
-.skills-container .grid-skills .css:hover {
-  background-color: #264DE4;
+.skills-container .grid-skills .database:hover {
+  background-color: salmon;
+}
+
+.skills-container .grid-skills .aws:hover {
+  background-color: yellow;
 }
 
 .skills-container .grid-skills .js:hover {
@@ -295,8 +299,12 @@ hr {
   background-color: #339933;
 }
 
-.skills-container .grid-skills .python:hover {
-  background-color: #3776AB;
+.skills-container .grid-skills .linux:hover {
+  background-color: #339933;
+}
+
+.skills-container .grid-skills .azure:hover {
+  background-color: #61DAFB;
 }
 
 /* Projects */
