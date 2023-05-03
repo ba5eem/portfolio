@@ -1,4 +1,7 @@
+// Define a functional component called Skills using the arrow function syntax
 const Skills = () => {
+  // Return a div element with class name 'skills-container'
+  // containing a header and a grid of skill cards
   return (
     <div className="skills-container">
       <h2>Skills</h2>
@@ -39,6 +42,9 @@ const Skills = () => {
     </div>
   )
 }
+
+// Export the Skills component as the default export of the module
+export default Skills;
 
 
 
@@ -97,4 +103,3 @@ const Skills = () => {
 
 // export default Skills;
 
-export default Skills;

@@ -1,4 +1,7 @@
+// Define a functional component called Footer using the arrow function syntax
 const Footer = () => {
+  // Return a div element with class name 'footer-container'
+  // containing a horizontal line, a paragraph, and a set of social media links
   return (
     <>
       <hr/>
@@ -37,4 +40,5 @@ const Footer = () => {
   )
 }
 
+// Export the Footer component as the default export of the module
 export default Footer;

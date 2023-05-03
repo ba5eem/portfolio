@@ -1,6 +1,11 @@
+// Import the Image component from the 'next/image' module
 import Image from "next/image";
 
+// Define a functional component called Hero using the arrow function syntax
 const Hero = () => {
+  // Return a div element with class name 'hero-container'
+  // containing an Image component, a div element with class name 'hero-text',
+  // and two social media icons
   return (
     <div className="hero-container">
       <Image src='/me.png' className="profile-img" width={300} height={300} alt="Joe's personal headshot" />
@@ -33,4 +38,5 @@ const Hero = () => {
   )
 }
 
+// Export the Hero component as the default export of the module
 export default Hero;

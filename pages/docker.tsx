@@ -1,3 +1,6 @@
+// This is a React component that displays a table of running Docker containers and allows the user to run new containers by clicking on buttons with labels corresponding to available Docker images. It uses the useState hook to manage state variables such as the list of available images, the filtered list of images based on search query, and the list of running containers. It also defines functions to handle user interactions such as clicking on buttons to run, stop, or restart containers, and to refresh the page. The component also uses Next.js' getServerSideProps function to fetch data from the server and pass it as props to the component.
+
+
 import { useState } from 'react';
 import appData from "../constants/data";
 import Containers from '../components/Containers';
@@ -6,6 +9,7 @@ import "../styles/post.module.css"
 
 
 export default function Home(props) {
+  // State hooks
   const [showLoader, setshowLoader] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const [app, setApp] = useState("");
@@ -18,32 +22,37 @@ export default function Home(props) {
   const [runningContainers, setRunningContainers] = useState(props.payload.containers || []);
 
 
+    // Handle search bar input
   const handleSearchChange = (event) => {
     const query = event.target.value;
     setSearchQuery(query);
     setFilteredNames(names.filter(name => name.toLowerCase().includes(query.toLowerCase())));
   }
 
+  // Run a container by calling the API endpoint
   const runContainer = (app) => () => {
     setApp(app);
     callAPI(`${appData.runContainerURL}/${app}`)
   }
 
+  // Stop a container by calling the API endpoint and refresh the page after 5 seconds
   const stopContainer = (containerName) => () => {
     callAPI(`${appData.stopContainerURL}/${containerName}`);
     setTimeout(() => {  window.location.reload(); }, 5000);
-
   }
 
+  // Restart a container by calling the API endpoint and refresh the page after 10 seconds
   const restartContainer = (containerID) => () => {
     callAPI(`${appData.stopContainerURL}/${containerID}`);
     setTimeout(() => {  window.location.reload(); }, 10000);
   } 
 
+  // Refresh the page
   const refreshPage = () => {
     window.location.reload();
   }
 
+  // Call the API endpoint and update state with the data returned
   const callAPI = async (url) => {
     try {
       const res = await fetch(url);
@@ -55,7 +64,7 @@ export default function Home(props) {
     }
   };
 
-
+  // Render a container in a table row
   const listContainer = (cont,id) => {
     let ports = props.payload.imagePorts;
     return (
@@ -96,7 +105,7 @@ export default function Home(props) {
         </div>
         </div>
       </div>
-
+      {/* Display running containers in a table */}
       <div className="table">
         <div>
           <ul>

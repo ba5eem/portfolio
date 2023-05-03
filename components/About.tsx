@@ -1,6 +1,10 @@
+// Import the Image component from the 'next/image' module
 import Image from "next/image";
 
+// Define a functional component called About using the arrow function syntax
 const About = () => {
+  // Return a div element with class name 'about-container'
+  // containing a heading, a paragraph, and an Image component
   return (
     <div className="about-container">
       <h2>About Me</h2>
@@ -19,4 +23,5 @@ const About = () => {
   )
 }
 
+// Export the About component as the default export of the module
 export default About;

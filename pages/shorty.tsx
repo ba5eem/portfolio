@@ -1,16 +1,37 @@
 import { useState } from 'react'
+import isURL from 'validator/lib/isURL';
 
 const Shorty = () => {
   const [inputValue, setInputValue] = useState('')
+  const [isValid, setIsValid] = useState(true)
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(inputValue)
+    if (isURL(inputValue)) {
+    callAPI(inputValue)
+    // TODO: need to complete this step
+
+    } else {
+      setIsValid(false)
+    }
   }
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value)
+    setIsValid(true)
   }
+
+  const callAPI = async (url) => {
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      console.log(data);
+
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div>
       <div className="contact-container">
@@ -21,6 +42,8 @@ const Shorty = () => {
             <input className="input-url" type="text" value={inputValue} onChange={handleInputChange} />
           </label>
           <button className="input-url-submit" type="submit">Submit</button>
+          {!isValid && <div className="error">Invalid URL</div>}
+
         </form>
         <button className="short-url" type="submit"></button>
 
@@ -41,6 +64,8 @@ const Shorty = () => {
     </div>
   )
 }
+
+
 
 
 export default Shorty;

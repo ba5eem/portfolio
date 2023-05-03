@@ -1,4 +1,7 @@
+// Define a functional component called Contact using the arrow function syntax
 const Contact = () => {
+  // Return a div element with class name 'contact-container'
+  // containing a heading, a paragraph, and a link
   return (
     <div className="contact-container">
       <h2>Get In Touch</h2>
@@ -8,4 +11,5 @@ const Contact = () => {
   )
 }
 
+// Export the Contact component as the default export of the module
 export default Contact;

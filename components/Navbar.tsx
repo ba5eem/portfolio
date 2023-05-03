@@ -1,7 +1,10 @@
-
+// Import the Link component from the 'next/link' module
 import Link from "next/link";
 
+// Define a functional component called Navbar using the arrow function syntax
 const Navbar = () => {
+  // Return a div element with class name 'nav-container'
+  // containing a logo that links to the home page and a 'Resume' button
   return (
     <div className="nav-container">
       <div className="logo">
@@ -14,4 +17,5 @@ const Navbar = () => {
   )
 }
 
+// Export the Navbar component as the default export of the module
 export default Navbar;
