@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import isURL from 'validator/lib/isURL';
+import appData from "../constants/data";
+import Link from "next/link";
 
 const Shorty = () => {
   const [inputValue, setInputValue] = useState('')
   const [isValid, setIsValid] = useState(true)
+  const [shortURL, setShortURL] = useState('')
+  const [isCopied, setIsCopied] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault()
     if (isURL(inputValue)) {
-    callAPI(inputValue)
-    // TODO: need to complete this step
+    postData(inputValue)
 
     } else {
       setIsValid(false)
@@ -21,16 +24,38 @@ const Shorty = () => {
     setIsValid(true)
   }
 
-  const callAPI = async (url) => {
+  const handleCopy = async () => {
     try {
-      const res = await fetch(url);
-      const data = await res.json();
-      console.log(data);
-
-    } catch (err) {
-      console.log(err);
+      await navigator.clipboard.writeText(shortURL);
+      setIsCopied(true); // set isCopied state to true
+      setTimeout(() => setIsCopied(false), 1000);
+    } catch (error) {
+      console.error("Failed to copy: ", error);
     }
   };
+
+
+
+  const postData = async (inputValue) => {
+    const url = appData.shortenURL;
+    const data = { url: inputValue};
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    };
+
+    try {
+      const response = await fetch(url, options);
+      const json = await response.json();
+      setShortURL(json);
+    } catch (error) {
+      console.error(error);
+      setShortURL("something wrong happened :(");
+    }
+  }
 
   return (
     <div>
@@ -45,7 +70,9 @@ const Shorty = () => {
           {!isValid && <div className="error">Invalid URL</div>}
 
         </form>
-        <button className="short-url" type="submit"></button>
+          <button onClick={handleCopy} className="short-url" type="submit">
+            {isCopied ? 'Copied!' : shortURL}
+          </button>
 
       </div>
 

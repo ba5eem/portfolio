@@ -13,21 +13,21 @@ const Home = () => {
   return (
     <>
       <Head>
-        // Set the page title, description, viewport, and favicon using the Head component
+        {/*Set the page title, description, viewport, and favicon using the Head component*/}
         <title>Baseem's Portfolio</title>
         <meta name="description" content="Baseem's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         
-        // Add a stylesheet link to load Font Awesome icons
+        {/*Add a stylesheet link to load Font Awesome icons*/}
         <link
           rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
       </Head>
       
-      // Render the necessary components in the desired order
+      {/*Render the necessary components in the desired order*/}
       <div>
         <Projects />
         <Skills />

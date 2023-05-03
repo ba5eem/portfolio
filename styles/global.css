@@ -545,7 +545,15 @@ tr:hover {
   transition: all 0.5s ease-in-out;
   margin-top: 8px;
 }
+.short-url:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, lightblue, blue);
+  cursor: copy;
+}
+
+
+
 .error {
-          color: red;
-          margin-top: 5px;
-        }
+  color: red;
+  margin-top: 5px;
+}
