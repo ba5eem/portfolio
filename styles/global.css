@@ -557,3 +557,28 @@ tr:hover {
   color: red;
   margin-top: 5px;
 }
+
+
+.skill-card-loading{
+  background-color: lightblue;
+  color: #1D1E20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: move-color 2s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+
+@keyframes move-color {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

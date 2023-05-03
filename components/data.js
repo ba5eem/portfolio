@@ -5,7 +5,7 @@ export const projectData = [
     description:
       "This is an internal site that is an admin-managed tool for running Docker containers. Simply select the app and once it is running, you can click 'Open' to begin using it. ",
     gitHubLink: 'https://github.com/ba5eem',
-    projectLink: ''
+    projectLink: '/docker'
   },
   {
     id: 2,

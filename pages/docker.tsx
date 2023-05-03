@@ -13,6 +13,7 @@ export default function Home(props) {
   const [showLoader, setshowLoader] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const [app, setApp] = useState("");
+  const [isSelected, setSelected] = useState(false);
 
 
   const [names, setNames] = useState(props.payload.availImages || []);
@@ -31,6 +32,10 @@ export default function Home(props) {
 
   // Run a container by calling the API endpoint
   const runContainer = (app) => () => {
+    setSelected(true)
+    setTimeout(() => {  
+      setSelected(false) 
+    }, 2000);
     setApp(app);
     callAPI(`${appData.runContainerURL}/${app}`)
   }
@@ -90,17 +95,16 @@ export default function Home(props) {
       <div className="buttons">
       <div className="skills-container">
         <div className="grid-skills">
-
-            
-
           {filteredNames.map((app, idx) => 
-            <Containers 
+            <button className="skill-card"
               disabled={disabled} 
-              className={disabled ? "disabled" : "button"} 
               key={idx}
               label={app} 
-              onClick={runContainer(app)}/>
+              onClick={runContainer(app)}>
+                {app}
+              </button>
               )}
+          {isSelected ? <button className="skill-card-loading">loading</button> : ""}
 
         </div>
         </div>

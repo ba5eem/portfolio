@@ -16,7 +16,7 @@ const About = () => {
           <p>As part of the project, I utilized my expertise in bash scripting to develop several scripts that automated processes and streamlined tasks. Additionally, I played a critical role in building the system using Docker Swarm, which allowed us to deploy and manage containers at scale. This experience not only deepened my understanding of these technologies, but it also provided me with the opportunity to collaborate with a dedicated and talented team towards a shared goal. I am excited to continue to grow and learn as a developer, and I believe that my skills and passion make me an ideal candidate for your team.</p>
         </div>
         <div className="about-img">
-          <Image src='/me.png' className="profile-img" width={300} height={500}/>
+          <Image src='/me.png' className="profile-img" alt="avatar" width={300} height={500}/>
         </div>
       </div>
     </div>

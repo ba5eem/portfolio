@@ -27,15 +27,15 @@ const Skills = () => {
           <p>Linux</p>
         </div>
         <div className="skill-card database">
-          <i class="fa-sharp fa-solid fa-database"></i>
+          <i className="fa-sharp fa-solid fa-database"></i>
           <p>SQL</p>
         </div>
         <div className="skill-card aws">
-          <i class="fa-brands fa-aws"></i>
+          <i className="fa-brands fa-aws"></i>
           <p>AWS</p>
         </div>
         <div className="skill-card azure">
-          <i class="fa-brands fa-microsoft"></i>
+          <i className="fa-brands fa-microsoft"></i>
           <p>azure</p>
         </div>
       </div>
