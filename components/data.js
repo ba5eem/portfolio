@@ -11,7 +11,7 @@ export const projectData = [
     id: 2,
     title: 'URL Shortner',
     description:
-      'TBD',
+      'Built a URL shortening tool using Node.js, Express, and Prisma - helping users to shorten lengthy links in seconds!',
     gitHubLink: 'https://github.com/ba5eem',
     projectLink: '/shorty'
   },
